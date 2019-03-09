@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MCRTS>
+    <Simulation name="TestSimulation">
+        <Model name="HumanHeadModel">
+            <nabove>1.0</nabove>
+            <nbelow>1.0</nbelow>
+            <Organ name="Head">
+                <Tissue name="Scalp">
+                    <Layer name="Dermis">
+                        <n>1.42</n>
+                        <mua>0.127</mua>
+                        <mus>190.376</mus>
+                        <g>0.900</g>
+                        <d>0.3</d>
+                    </Layer>                               
+                    <Layer name="Bone">
+                        <n>1.555</n>
+                        <mua>0.147</mua>
+                        <mus>161.245</mus>
+                        <g>0.900</g>
+                        <d>0.500</d>
+                    </Layer>
+                
+                    <Layer name="GrayMatter">
+                        <n>1.360</n>
+                        <mua>0.270</mua>
+                        <mus>75.157</mus>
+                        <g>0.899</g>
+                        <d>0.4</d>
+                    </Layer>
+                    <Layer name="WhiteMatter">
+                        <n>1.380</n>
+                        <mua>0.931</mua>
+                        <mus>372.501</mus>
+                        <g>0.870</g>
+                        <d>0.2</d>
+                    </Layer>
+                </Tissue>
+            </Organ>
+        </Model>
+        <geometrySensing>
+            <lightsource id="1">
+                <x>0</x>
+                <y>1</y>
+            </lightsource>                    
+            <detector id="1">
+                <x>0.5</x>
+                <y>0.5</y>
+                <r>0.03</r>
+            </detector>            
+            <Channel sId="1">
+                <Id_Detector>1</Id_Detector>
+                <Id_Detector>1</Id_Detector>
+            </Channel>          
+        </geometrySensing>
+        <SimulationParams>
+            <Grid type="Cartesian">
+                <deltax>0.01</deltax>
+                <deltay>0.01</deltay>
+                <deltaz>0.01</deltaz>
+                <Nx>400</Nx>
+                <Ny>400</Ny>
+                <Nz>240</Nz>
+            </Grid>
+            <optic>
+                <photons>1000</photons>
+            </optic>
+            <general>
+                <fileOut>result.xml</fileOut>
+            </general>
+        </SimulationParams>
+    </Simulation>
+</MCRTS>
